@@ -31,6 +31,8 @@ public class ApiService {
 				leaststationslinktemp.add(stationouter.getName());
 				updatedchargerequired = updatedchargerequired - limit;
 				updatedtravelpossible = updatedtravelpossible - distance + limit;
+				long updatedchargerequiredloop = updatedchargerequired;
+				long updatedtravelpossibleloop = updatedtravelpossible;
 				if (updatedchargerequired > 0) {
 					int k =1 ;
 					while(i+k < lst.size()) {
@@ -51,11 +53,20 @@ public class ApiService {
 						}
 						if ((leaststationslink.size() == 0 || leaststationslink.size() > leaststationslinktemp.size())
 								&& leaststationslinktemp.size() > 0) {
-							leaststationslink = leaststationslinktemp; // swap if new chargestation combinations are least in number
+							if(!leaststationslink.containsAll(leaststationslinktemp))
+								leaststationslink = leaststationslinktemp; // swap if new chargestation combinations are least in number
 																		// than previous entry
 						}
+						leaststationslinktemp = new LinkedList<>();
+						distancelinknodes=new LinkedList<>();
+						distancelinknodes.add(distance);
+						leaststationslinktemp.add(stationouter.getName());
+						updatedchargerequired = updatedchargerequiredloop;
+						updatedtravelpossible = updatedtravelpossibleloop;
 						k++;
 					}
+				}else {
+					leaststationslink = leaststationslinktemp;
 				}
 			}
 			
