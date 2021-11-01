@@ -32,28 +32,33 @@ public class ApiService {
 				updatedchargerequired = updatedchargerequired - limit;
 				updatedtravelpossible = updatedtravelpossible - distance + limit;
 				if (updatedchargerequired > 0) {
-					for (int j = i + 1; j < lst.size(); j++) {
-						if (updatedchargerequired > 0) {
-							ChargingStation stationinner = lst.get(j);
-							long distanceinner = Long.parseLong(stationinner.getDistance());
-							long limitinner = Long.parseLong(stationinner.getLimit());
-							if (distanceinner
-									- distancelinknodes.get(distancelinknodes.size() - 1) <= updatedtravelpossible) {
-								leaststationslinktemp.add(stationinner.getName());
-								updatedchargerequired = updatedchargerequired - limitinner;
-								updatedtravelpossible = updatedtravelpossible
-										- (limitinner - distancelinknodes.get(distancelinknodes.size() - 1))
-										+ limitinner;
+					int k =1 ;
+					while(i+k < lst.size()) {
+						for (int j = i + k; j < lst.size(); j++) {
+							if (updatedchargerequired > 0) {
+								ChargingStation stationinner = lst.get(j);
+								long distanceinner = Long.parseLong(stationinner.getDistance());
+								long limitinner = Long.parseLong(stationinner.getLimit());
+								if (distanceinner
+										- distancelinknodes.get(distancelinknodes.size() - 1) <= updatedtravelpossible) {
+									leaststationslinktemp.add(stationinner.getName());
+									updatedchargerequired = updatedchargerequired - limitinner;
+									updatedtravelpossible = updatedtravelpossible
+											- (limitinner - distancelinknodes.get(distancelinknodes.size() - 1))
+											+ limitinner;
+								}
 							}
 						}
+						if ((leaststationslink.size() == 0 || leaststationslink.size() > leaststationslinktemp.size())
+								&& leaststationslinktemp.size() > 0) {
+							leaststationslink = leaststationslinktemp; // swap if new chargestation combinations are least in number
+																		// than previous entry
+						}
+						k++;
 					}
 				}
 			}
-			if ((leaststationslink.size() == 0 || leaststationslink.size() > leaststationslinktemp.size())
-					&& leaststationslinktemp.size() > 0) {
-				leaststationslink = leaststationslinktemp; // swap if new chargestation combinations are least in number
-															// than previous entry
-			}
+			
 		}
 		return leaststationslink;
 	}
