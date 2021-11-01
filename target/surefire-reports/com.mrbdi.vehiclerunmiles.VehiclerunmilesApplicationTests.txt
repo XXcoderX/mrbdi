@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mrbdi.vehiclerunmiles.VehiclerunmilesApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.567 s - in com.mrbdi.vehiclerunmiles.VehiclerunmilesApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.219 s - in com.mrbdi.vehiclerunmiles.VehiclerunmilesApplicationTests
