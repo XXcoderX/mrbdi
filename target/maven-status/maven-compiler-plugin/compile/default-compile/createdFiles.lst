@@ -1,0 +1,13 @@
+com/mrbdi/vehiclerunmiles/model/response/ChargingStation.class
+com/mrbdi/vehiclerunmiles/model/request/MsRequestFormat.class
+com/mrbdi/vehiclerunmiles/service/ApiService.class
+com/mrbdi/vehiclerunmiles/controller/ExceptionController.class
+com/mrbdi/vehiclerunmiles/controller/ApiController.class
+com/mrbdi/vehiclerunmiles/model/response/MsResponseFormat.class
+com/mrbdi/vehiclerunmiles/feign/MockApisClient.class
+com/mrbdi/vehiclerunmiles/VehiclerunmilesApplication.class
+com/mrbdi/vehiclerunmiles/model/response/Error.class
+com/mrbdi/vehiclerunmiles/model/response/DistanceResponse.class
+com/mrbdi/vehiclerunmiles/model/response/ChargeLevelResponse.class
+com/mrbdi/vehiclerunmiles/feign/MockApiClientFallback.class
+com/mrbdi/vehiclerunmiles/model/response/ChargingStationResponse.class

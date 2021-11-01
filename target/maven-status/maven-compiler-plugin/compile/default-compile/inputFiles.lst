@@ -1,0 +1,13 @@
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/service/ApiService.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/model/response/ChargingStation.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/controller/ApiController.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/VehiclerunmilesApplication.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/model/response/ChargeLevelResponse.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/model/response/MsResponseFormat.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/model/request/MsRequestFormat.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/feign/MockApiClientFallback.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/model/response/ChargingStationResponse.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/controller/ExceptionController.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/model/response/Error.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/feign/MockApisClient.java
+/home/xcoderx/Downloads/vehiclerunmiles/src/main/java/com/mrbdi/vehiclerunmiles/model/response/DistanceResponse.java
